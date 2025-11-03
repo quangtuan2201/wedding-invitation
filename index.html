@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiệp Cưới Xuân Hồng 💕 Hiền Trang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  /* ==== Nút bật/tắt nhạc ==== */
+  .music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s;
+  }
+
+  .music-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .music-btn::before {
+    content: "🎵";
+    font-size: 24px;
+  }
+</style>
+
+<body>
+  <!-- Hiệu ứng trái tim -->
+  <div id="hearts"></div>
+
+  <!-- Nhạc nền -->
+
+
+  <!-- SECTION 1: Trang mở đầu -->
+  <section class="hero">
+    <h2 class="subtitle">SAVE THE DATE</h2>
+    <h1 class="title" style=" font-family: 'Great Vibes', cursive;">Xuân Hồng</span> <span
+        class="icon-heat icon-heatheat" style="font-size: 3rem;"> 💖</span>
+      Hiền Trang </h1>
+    <p class="invite-text">"Trân trọng kính mời bạn đến dự ngày vui của chúng tôi "</p>
+    <div class="hero-images">
+      <img src="./img/anhcuoi1.jpeg" alt="Cặp đôi" class="couple-photo">
+    </div>
+    <p class="invite-text">" Hôn nhân là chuyện cả đời, <br>
+      Yêu người vừa ý, cưới người mình thương..."</p>
+
+  </section>
+  <!-- SECTION 2: Thông tin cô dâu chú rể -->
+  <section class="details-bride-groom">
+
+    <div class="detail-bride">
+      <p>Chú Rể</p>
+      <h2>Xuân Hồng</h2>
+      <p style="margin-top: 10px;"> <strong>
+          Nhà trai <br>
+          Ông: Nguyễn Xuân A <br>
+          Bà: Nguyễn Thị A</p>
+      </strong>
+    </div>
+    <div class="">
+      <p2 style="display: block; margin-top: -30px;"><strong>TRÂN TRỌNG THÔNG BÁO LỄ thành hôn</strong></p2>
+      <span class="icon-heatheat " style="margin-top: 30px; font-size: 90px;">💖</span>
+    </div>
+    <div class="detail-bride">
+      <p>Cô Dâu</p>
+      <h2>Hiền Trang</h2>
+      <p style="margin-top: 10px;"><strong>
+          Nhà gái <br>
+          Ông: Nguyễn Hiền B <br>
+          Bà: Nguyễn Thị B</p>
+
+      </strong>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Thông tin lễ cưới -->
+  <section class="info">
+    <h2>💍 Thông tin lễ cưới</h2>
+    <div>
+
+    </div>
+    <p><strong>Thời gian:</strong> 10:00 AM - Ngày 20/12/2025</p>
+    <p><strong>Địa điểm:</strong> Trung tâm tiệc cưới Hoàng Gia, Hà Nội</p>
+  </section>
+
+  <!-- SECTION 3: Bộ sưu tập ảnh -->
+  <section class="gallery">
+    <h2>📸 Khoảnh khắc của chúng tôi</h2>
+    <div class="carousels" id="carousel">
+      <img src="./img/anhcuoi1.jpeg" alt="Ảnh 1">
+      <img src="./img/hientrang1.jpg" alt="Ảnh 2">
+      <img src="./img/hientrang2.jpg" alt="Ảnh 3">
+      <img src="./img/hientrang4.jpg" alt="Ảnh 4">
+    </div>
+  </section>
+  <!-- SECTION THỜI GIAN -->
+  <section class="wedding-schedule">
+    <!-- Cột 1: Tiệc cưới nhà gái -->
+    <div class="schedule-card">
+      <h3>TIỆC CƯỚI NHÀ GÁI</h3>
+      <h4>CHỦ NHẬT</h4>
+      <div class="time">16H00</div>
+      <div class="date">09</div>
+      <div class="month">Tháng 11 - 2025</div>
+      <p class="note">(Tức Ngày 20 Tháng 09 Năm Ất Tỵ)</p>
+    </div>
+    <!-- Cột 3: Tiệc cưới nhà trai -->
+    <div class="schedule-card">
+      <h3>TIỆC CƯỚI NHÀ TRAI</h3>
+      <h4>CHỦ NHẬT</h4>
+      <div class="time">16H00</div>
+      <div class="date">09</div>
+      <div class="month">Tháng 11 - 2025</div>
+      <p class="note">(Tức Ngày 20 Tháng 09 Năm Ất Tỵ)</p>
+    </div>
+    <!-- Cột 2: Lễ tân hôn -->
+    <div class="schedule-card">
+      <div class="icon-wrapper">
+        <img class="avatar" src="./img/chu-re.png" alt="icon cô dâu chú rể" />
+        <div>
+          <h3>LỄ TÂN HÔN</h3>
+          <h4>THỨ HAI</h4>
+        </div>
+        <img class="avatar" src="./img/Co-dau.png" alt="icon cưới" />
+      </div>
+
+
+      <div class="time">13H30</div>
+      <div class="date">10</div>
+      <div class="month">Tháng 11 - 2025</div>
+      <p class="note">(Tức Ngày 21 Tháng 09 Năm Ất Tỵ)</p>
+    </div>
+
+  </section>
+  <!-- Hop qua -->
+  <section class="gift-section">
+    <h2>💝 Hộp mừng cưới 💝</h2>
+    <p>Cảm ơn tình cảm của mọi người đã dành cho chúng mình!</p>
+
+    <div class="gift-boxes">
+      <div class="gift-box" onclick="openPopup('popup-trai')">
+        <img src="./img/hop-qua.png" alt="Hộp quà nhà trai" />
+        <div class="gift-label">NHÀ TRAI</div>
+      </div>
+
+      <div class="gift-box" onclick="openPopup('popup-gai')">
+        <img src="./img/hop-qua.png" alt="Hộp quà nhà gái" />
+        <div class="gift-label">NHÀ GÁI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup nhà trai -->
+  <div class="popup" id="popup-trai" onclick="closeOutside(event, 'popup-trai')">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-trai')">&times;</span>
+      <img src="./img/hop-qua.png" alt="QR mừng cưới nhà trai">
+    </div>
+  </div>
+
+  <!-- Popup nhà gái -->
+  <div class="popup" id="popup-gai" onclick="closeOutside(event, 'popup-gai')">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-gai')">&times;</span>
+      <img src="./img/hop-qua.png" alt="QR mừng cưới nhà gái">
+    </div>
+  </div>
+
+
+  <!-- SECTION 4: Lời cảm ơn -->
+  <section class="thanks" style=" font-family: 'Great Vibes', cursive;">
+    <h2>Cảm ơn bạn đã đồng hành cùng chúng tôi 💞</h2>
+    <p>Hẹn gặp bạn trong ngày đặc biệt nhất cuộc đời!</p>
+  </section>
+
+  <!-- ===== MUSIC PLAYER ===== -->
+  <button class="music-btn" id="musicToggle"></button>
+  <audio id="bgMusic" loop autoplay>
+    <source src="./mp3/IDo.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('musicToggle');
+    btn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        btn.style.background = '#ffb6c1';
+      } else {
+        music.pause();
+        btn.style.background = '#fff';
+      }
+    });
+
+
+  </script>
+
+  <script src="./script.js">
+
+  </script>
+</body>
+
+</html>

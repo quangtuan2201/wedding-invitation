@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiệu ứng trái tim 💖</title>
+<style>
+body {
+  background-color: rgba(255, 192, 203, 0.3);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding-top: 100px;
+}
+
+/* ===== Hiệu ứng cho icon trái tim ===== */
+.icon-heatheat {
+  display: inline-block;
+  font-size: 50px;
+  color: #ff4b8a;
+  text-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+  animation: heartbeat 1.5s infinite ease-in-out, glow 3s infinite ease-in-out;
+  position: relative;
+}
+
+/* Hiệu ứng nhịp tim */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+
+/* Hiệu ứng sáng mờ */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(255, 105, 180, 1);
+  }
+}
+
+/* Hiệu ứng ánh sáng lấp lánh quanh trái tim */
+.icon-heatheat::after {
+  content: "✨";
+  position: absolute;
+  font-size: 24px;
+  top: -20px;
+  right: -25px;
+  animation: sparkle 2s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(20deg) scale(1.3);
+  }
+}
+</style>
+</head>
+<body>
+
+<div>
+  <p style="display: block; font-weight: bold; margin-bottom: 10px;">
+    TRÂN TRỌNG THÔNG BÁO LỄ THÀNH HÔN
+  </p>
+  <span class="icon-heatheat">💖</span>
+</div>
+
+</body>
+</html>
