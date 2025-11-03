@@ -56,30 +56,32 @@
 
   </section>
   <!-- SECTION 2: Thông tin cô dâu chú rể -->
-  <section class="details-bride-groom">
+  <section class="" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <p2 style="display: block; margin-top: -30px;margin-bottom: 20px;   text-transform: uppercase; "><strong>TRÂN TRỌNG THÔNG BÁO LỄ thành hôn</strong></p2>
+    <div class="details-bride-groom">
+      <div class="detail-bride" >
+        <p>Chú Rể</p>
+        <h2>Xuân Hồng</h2>
+        <p style="margin-top: 10px;"> <strong>
+            Nhà trai <br>
+            Ông: Nguyễn Xuân A <br>
+            Bà: Nguyễn Thị A</p>
+        </strong>
+      </div>
+      <div class="detail-bride-center">
 
-    <div class="detail-bride">
-      <p>Chú Rể</p>
-      <h2>Xuân Hồng</h2>
-      <p style="margin-top: 10px;"> <strong>
-          Nhà trai <br>
-          Ông: Nguyễn Xuân A <br>
-          Bà: Nguyễn Thị A</p>
-      </strong>
-    </div>
-    <div class="">
-      <p2 style="display: block; margin-top: -30px;"><strong>TRÂN TRỌNG THÔNG BÁO LỄ thành hôn</strong></p2>
-      <span class="icon-heatheat " style="margin-top: 30px; font-size: 90px;">💖</span>
-    </div>
-    <div class="detail-bride">
-      <p>Cô Dâu</p>
-      <h2>Hiền Trang</h2>
-      <p style="margin-top: 10px;"><strong>
-          Nhà gái <br>
-          Ông: Nguyễn Hiền B <br>
-          Bà: Nguyễn Thị B</p>
+        <span class="icon-heatheat " style=" font-size: 90px;">💖</span>
+      </div>
+      <div class="detail-bride" >
+        <p>Cô Dâu</p>
+        <h2>Hiền Trang</h2>
+        <p style="margin-top: 10px;"><strong>
+            Nhà gái <br>
+            Ông: Nguyễn Hiền B <br>
+            Bà: Nguyễn Thị B</p>
 
-      </strong>
+        </strong>
+      </div>
     </div>
   </section>
 
@@ -201,6 +203,22 @@
         btn.style.background = '#fff';
       }
     });
+
+    // Tạo hiệu ứng trái tim bay
+    const heartsContainer = document.getElementById("hearts");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "&#10084;";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 25 + 10 + "px";
+      heart.style.animationDuration = Math.random() * 5 + 6 + "s";
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 11000);
+    }
+    setInterval(createHeart, 600);
+
 
 
   </script>
