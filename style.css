@@ -433,7 +433,6 @@ section {
   /* --- Ảnh bên trong popup --- */
   .popup-content {
     position: relative;
-    margin-top: 100vh;
     background-color: #fff;
     padding: 20px;
     border-radius: 15px;
