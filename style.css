@@ -445,6 +445,8 @@ section {
     max-height: 85vh;
     border-radius: 10px;
     display: block;
+    width: 350px;
+    height: 350px;
   }
 
   .close-btn {
