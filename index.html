@@ -8,112 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <style>
-  /* ==== Nút bật/tắt nhạc ==== */
-  .music-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 999;
-    transition: transform 0.3s;
-  }
 
-  .music-btn:hover {
-    transform: scale(1.1);
-  }
-
-  .music-btn::before {
-    content: "🎵";
-    font-size: 24px;
-  }
-
-  /*  */
-  /* LỊCH */
-  .calendar {
-    display: inline-block;
-    border: 2px solid #b84a4a;
-    border-radius: 5px;
-    padding: 10px 20px;
-    background: #fffdfb;
-    margin-top: 20px;
-  }
-
-  .calendar h2 {
-    margin: 10px 0;
-    font-weight: bold;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th,
-  td {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    position: relative;
-  }
-
-  th {
-    color: #444;
-  }
-
-  td.heart_day::before {
-    content: "❤️";
-    position: absolute;
-    font-size: 28px;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    z-index: 0;
-    opacity: 0.8;
-  }
-
-  td.heart_day span {
-    position: relative;
-    z-index: 1;
-    color: #000;
-    font-weight: bold;
-  }
-
-  /* ĐỒNG HỒ ĐẾM NGƯỢC */
-  .countdown {
-    margin-top: 30px;
-  }
-
-  .countdown h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .time {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .time div {
-    background: #fff;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: 1px solid #b84a4a;
-    min-width: 60px;
-  }
-
-  .wedding-img {
-    margin-top: 25px;
-  }
 </style>
 
 <body>
@@ -347,16 +242,11 @@
 
 
   </section>
-
-
-
-
   <!-- SECTION 4: Lời cảm ơn -->
   <section class="thanks" style=" font-family: 'Great Vibes', cursive;">
     <h2>Cảm ơn bạn đã đồng hành cùng chúng tôi 💞</h2>
     <p>Hẹn gặp bạn trong ngày đặc biệt nhất cuộc đời!</p>
   </section>
-
   <!-- ===== MUSIC PLAYER ===== -->
   <button class="music-btn" id="musicToggle"></button>
   <audio id="bgMusic" loop autoplay>
@@ -375,10 +265,8 @@
         btn.style.background = '#fff';
       }
     });
-
     // Tạo hiệu ứng trái tim bay
     const heartsContainer = document.getElementById("hearts");
-
     function createHeart() {
       const heart = document.createElement("div");
       heart.classList.add("heart");
@@ -390,7 +278,6 @@
       setTimeout(() => heart.remove(), 11000);
     }
     setInterval(createHeart, 600);
-
     // Hộp quà
     function openPopup(id) {
       document.getElementById(id).classList.add('active');
@@ -407,7 +294,6 @@
         closePopup(id);
       }
     }
-
     // Lịch
     // NGÀY HÔN LỄ
     const weddingDate = new Date("2025-11-10T13:30:00").getTime();

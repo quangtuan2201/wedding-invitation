@@ -446,7 +446,7 @@ section {
     border-radius: 10px;
     display: block;
     width: 350px;
-    height: 350px;
+    height:350px ;
   }
 
   .close-btn {
@@ -502,3 +502,111 @@ section {
     }
   }
   
+   /* ==== Nút bật/tắt nhạc ==== */
+  .music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s;
+  }
+
+  .music-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .music-btn::before {
+    content: "🎵";
+    font-size: 24px;
+  }
+
+  /*  */
+  /* LỊCH */
+  .calendar {
+    display: inline-block;
+    border: 2px solid #b84a4a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: #fffdfb;
+    margin-top: 20px;
+  }
+
+  .calendar h2 {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+  }
+
+  th {
+    color: #444;
+  }
+
+  td.heart_day::before {
+    content: "❤️";
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 0;
+    opacity: 0.8;
+  }
+
+  td.heart_day span {
+    position: relative;
+    z-index: 1;
+    /* color: #000; */
+    font-weight: bold;
+    color: white;
+
+  }
+
+  /* ĐỒNG HỒ ĐẾM NGƯỢC */
+  .countdown {
+    margin-top: 30px;
+  }
+
+  .countdown h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .time {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .time div {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #b84a4a;
+    min-width: 60px;
+  }
+
+  .wedding-img {
+    margin-top: 25px;
+  }
