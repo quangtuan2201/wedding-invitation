@@ -32,6 +32,88 @@
     content: "🎵";
     font-size: 24px;
   }
+
+  /*  */
+  /* LỊCH */
+  .calendar {
+    display: inline-block;
+    border: 2px solid #b84a4a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: #fffdfb;
+    margin-top: 20px;
+  }
+
+  .calendar h2 {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+  }
+
+  th {
+    color: #444;
+  }
+
+  td.heart_day::before {
+    content: "❤️";
+    position: absolute;
+    font-size: 28px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 0;
+    opacity: 0.8;
+  }
+
+  td.heart_day span {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* ĐỒNG HỒ ĐẾM NGƯỢC */
+  .countdown {
+    margin-top: 30px;
+  }
+
+  .countdown h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .time {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .time div {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #b84a4a;
+    min-width: 60px;
+  }
+
+  .wedding-img {
+    margin-top: 25px;
+  }
 </style>
 
 <body>
@@ -57,9 +139,10 @@
   </section>
   <!-- SECTION 2: Thông tin cô dâu chú rể -->
   <section class="" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <p2 style="display: block; margin-top: -30px;margin-bottom: 20px;   text-transform: uppercase; "><strong>TRÂN TRỌNG THÔNG BÁO LỄ thành hôn</strong></p2>
+    <p2 style="display: block; margin-top: -30px;margin-bottom: 20px;   text-transform: uppercase; "><strong>TRÂN TRỌNG
+        THÔNG BÁO LỄ thành hôn</strong></p2>
     <div class="details-bride-groom">
-      <div class="detail-bride" >
+      <div class="detail-bride">
         <p>Chú Rể</p>
         <h2>Xuân Hồng</h2>
         <p style="margin-top: 10px;"> <strong>
@@ -72,7 +155,7 @@
 
         <span class="icon-heatheat " style=" font-size: 90px;">💖</span>
       </div>
-      <div class="detail-bride" >
+      <div class="detail-bride">
         <p>Cô Dâu</p>
         <h2>Hiền Trang</h2>
         <p style="margin-top: 10px;"><strong>
@@ -177,6 +260,95 @@
       <img src="./img/hop-qua.png" alt="QR mừng cưới nhà gái">
     </div>
   </div>
+  <!-- Lịch -->
+  <section>
+    <h2>Save the date</h2>
+    <div class="calendar">
+      <h2>THÁNG 11 &nbsp;&nbsp; 2025</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>CN</th>
+            <th>T2</th>
+            <th>T3</th>
+            <th>T4</th>
+            <th>T5</th>
+            <th>T6</th>
+            <th>T7</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>30</td>
+            <td>31</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td class="heart_day"><span>9</span></td>
+            <td class="heart_day"><span>10</span></td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="countdown">
+      <h3>HÔN LỄ SẼ DIỄN RA SAU:</h3>
+      <div class="time">
+        <div id="days">00</div> :
+        <div id="hours">00</div> :
+        <div id="minutes">00</div> :
+        <div id="seconds">00</div>
+      </div>
+    </div>
+
+
+  </section>
+
+
 
 
   <!-- SECTION 4: Lời cảm ơn -->
@@ -218,6 +390,51 @@
       setTimeout(() => heart.remove(), 11000);
     }
     setInterval(createHeart, 600);
+
+    // Hộp quà
+    function openPopup(id) {
+      document.getElementById(id).classList.add('active');
+    }
+
+    function closePopup(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    // Ẩn popup khi click ra ngoài ảnh
+    function closeOutside(event, id) {
+      const popupContent = document.querySelector(`#${id} .popup-content`);
+      if (!popupContent.contains(event.target)) {
+        closePopup(id);
+      }
+    }
+
+    // Lịch
+    // NGÀY HÔN LỄ
+    const weddingDate = new Date("2025-11-10T13:30:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance < 0) {
+        document.querySelector(".countdown h3").textContent = "💖 HÔN LỄ ĐÃ DIỄN RA 💖";
+        document.querySelector(".time").style.display = "none";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 
 
 

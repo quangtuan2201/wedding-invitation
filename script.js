@@ -56,19 +56,4 @@ musicBtn.addEventListener("click", () => {
       const walk = (x - startX) * 2;
       carousel.scrollLeft = scrollLeft - walk;
     });
-//
-   function openPopup(id) {
-      document.getElementById(id).classList.add('active');
-    }
 
-    function closePopup(id) {
-      document.getElementById(id).classList.remove('active');
-    }
-
-    // Ẩn popup khi click ra ngoài ảnh
-    function closeOutside(event, id) {
-      const popupContent = document.querySelector(`#${id} .popup-content`);
-      if (!popupContent.contains(event.target)) {
-        closePopup(id);
-      }
-    }
